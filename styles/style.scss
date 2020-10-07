@@ -515,24 +515,34 @@ a {
 
 
 @media (max-width: 1000px) {
+
+    body {
+        width: 100vw;
+    }
     .wrapper {
         width: 90%;
     }
 
     .header {
         &-contact {
-        margin-top: 00px;
+        margin-top: 0px;
+        right: 5%;
     }
     } 
 
     .bg {
-        height: 200vh;
+        height: 300vh;
         width: auto;
+    }
+
+    .bg1 {
+        left: 0;
     }
 
     .bg2 {
         top: 245vh;
     }
+
 
     .hero {
         height: 50vh;
@@ -604,5 +614,29 @@ a {
             }
         }
     }
+
+    .intro {
+        flex-direction: column;
+        &-text {
+            width: 100%;
+            margin-left: 0;
+        }
+    }
+
+    .photo-left, .photo-right {
+        flex-direction: column;
+    }
+
+    .photo-left-cont {
+        margin-bottom: 20px;
+        margin-left: 00;
+        width: 100%;
+    }
+    
+    .photo-right-cont {
+        margin-bottom: 20px;
+        width: 100%;
+    }
+
 
 }
