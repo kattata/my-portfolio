@@ -508,12 +508,6 @@ a {
 }
 
 
-
-
-
-
-
-
 @media (max-width: 1000px) {
 
     body {
@@ -548,9 +542,17 @@ a {
         height: 50vh;
         & h1 {
             font-size: 35px;
+            line-height: 1.2;
+        }
+        & p {
+            font-size: 16px;
         }
         .frontend {
             margin-left: 0;
+        }
+        .and {
+            margin-top: 0;
+            font-size: 16px;
         }
         .ui {
             text-align: left;
@@ -612,14 +614,28 @@ a {
                 margin-top: 40px;
                 width: 100%;
             }
+
         }
+    }
+    // PROJECT
+    .project-main h4 {
+        width: 80%;
     }
 
     .intro {
         flex-direction: column;
+        margin-top: 40px;
         &-text {
             width: 100%;
             margin-left: 0;
+        }
+        &-technologies {
+            justify-content: space-around;
+            margin: 0 40x;
+        }
+        &-info {
+            text-align: center;
+            margin-top: 10px;
         }
     }
 
@@ -638,5 +654,24 @@ a {
         width: 100%;
     }
 
+    .contact {
+        &-info {
+            height: 50px;
+            width: 50px;
+        }
+        & .email {
+            height: 30px;
+            width: 30px;
+        }
+        & .linkedin {
+            height: 25px;
+        }
+    }
+
+    .project-contact {
+        &::after {
+            left: -19px;
+        }
+    }
 
 }

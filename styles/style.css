@@ -623,9 +623,17 @@ a {
   }
   .hero h1 {
     font-size: 35px;
+    line-height: 1.2;
+  }
+  .hero p {
+    font-size: 16px;
   }
   .hero .frontend {
     margin-left: 0;
+  }
+  .hero .and {
+    margin-top: 0;
+    font-size: 16px;
   }
   .hero .ui {
     text-align: left;
@@ -682,15 +690,28 @@ a {
     margin-top: 40px;
     width: 100%;
   }
+  .project-main h4 {
+    width: 80%;
+  }
   .intro {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    margin-top: 40px;
   }
   .intro-text {
     width: 100%;
     margin-left: 0;
+  }
+  .intro-technologies {
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    margin: 0 40x;
+  }
+  .intro-info {
+    text-align: center;
+    margin-top: 10px;
   }
   .photo-left, .photo-right {
     -webkit-box-orient: vertical;
@@ -706,6 +727,20 @@ a {
   .photo-right-cont {
     margin-bottom: 20px;
     width: 100%;
+  }
+  .contact-info {
+    height: 50px;
+    width: 50px;
+  }
+  .contact .email {
+    height: 30px;
+    width: 30px;
+  }
+  .contact .linkedin {
+    height: 25px;
+  }
+  .project-contact::after {
+    left: -19px;
   }
 }
 /*# sourceMappingURL=style.css.map */
