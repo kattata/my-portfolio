@@ -22,7 +22,7 @@ body {
 } 
 
 .wrapper {
-    width: 65%;
+    width: 60%;
     max-width: 970px;
     margin: 0 auto;
 }
@@ -125,7 +125,7 @@ a {
 
 .bg2 {
     left: 0;
-    top: 203vh;
+    top: 220vh;
 }
 
 // HERO
@@ -192,10 +192,10 @@ a {
     &::after {
             content: "";
             position: absolute;
-            height: 397vh;
+            height: 365vh;
             width: 2px;
             background-color: $base;
-            top: -87vh;
+            top: -50vh;
             left: 0;
     }
 }
@@ -227,10 +227,11 @@ a {
 
 .background {
     display: flex;
-    height: 350px;
+    // height: 350px;
     // justify-content: space-between;
     position: relative;
     padding-top: 50px;
+    margin-top: -200px;
     & p {
         margin-bottom: 10px;
         width: 400px;
@@ -301,6 +302,7 @@ a {
     &-text {
         margin: 100px 0;
         width: 350px;
+        // align-items: flex-end;
         & * {
             margin-bottom: 10px;
         }
@@ -512,8 +514,95 @@ a {
 
 
 
-// @media (max-width: 1000px) {
-//     body {
-//         display: none;
-//     }
-// }
+@media (max-width: 1000px) {
+    .wrapper {
+        width: 90%;
+    }
+
+    .header {
+        &-contact {
+        margin-top: 00px;
+    }
+    } 
+
+    .bg {
+        height: 200vh;
+        width: auto;
+    }
+
+    .bg2 {
+        top: 245vh;
+    }
+
+    .hero {
+        height: 50vh;
+        & h1 {
+            font-size: 35px;
+        }
+        .frontend {
+            margin-left: 0;
+        }
+        .ui {
+            text-align: left;
+        }
+        .continue {
+            display: none;
+        }
+    }
+
+    .home-main {
+        &::after {
+            top: 0;
+            height: 390vh;
+        }
+    }
+
+    .section {
+        margin-left: 20px;
+    }
+
+    .dot {
+        left: -23px;
+    }
+
+    .background {
+        flex-direction: column;
+        & p {
+            width: 100%;
+        }
+        & img {
+            // margin-bottom: 20px;
+            margin-left: 0;
+            margin-top: 20px;
+            width: 100%;
+        }
+    }
+
+    .skills {
+        & .development {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+        }
+
+        & .tool {
+            margin-top: 20px;
+            margin-right: 20px;
+        }
+    }
+
+    .work {
+        .project {
+            flex-direction: column;
+            margin-bottom: 20px;
+            & img {
+                width: 100%;
+                height: auto;
+            }
+            &-text {
+                margin-top: 40px;
+                width: 100%;
+            }
+        }
+    }
+
+}

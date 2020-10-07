@@ -19,7 +19,7 @@ body {
 }
 
 .wrapper {
-  width: 65%;
+  width: 60%;
   max-width: 970px;
   margin: 0 auto;
 }
@@ -140,7 +140,7 @@ a {
 
 .bg2 {
   left: 0;
-  top: 203vh;
+  top: 220vh;
 }
 
 .hero {
@@ -209,10 +209,10 @@ a {
 .home-main::after {
   content: "";
   position: absolute;
-  height: 397vh;
+  height: 365vh;
   width: 2px;
   background-color: #1D1D1D;
-  top: -87vh;
+  top: -50vh;
   left: 0;
 }
 
@@ -243,9 +243,9 @@ a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  height: 350px;
   position: relative;
   padding-top: 50px;
+  margin-top: -200px;
 }
 
 .background p {
@@ -595,5 +595,85 @@ a {
 
 .project-contact a {
   text-decoration: none;
+}
+
+@media (max-width: 1000px) {
+  .wrapper {
+    width: 90%;
+  }
+  .header-contact {
+    margin-top: 00px;
+  }
+  .bg {
+    height: 200vh;
+    width: auto;
+  }
+  .bg2 {
+    top: 245vh;
+  }
+  .hero {
+    height: 50vh;
+  }
+  .hero h1 {
+    font-size: 35px;
+  }
+  .hero .frontend {
+    margin-left: 0;
+  }
+  .hero .ui {
+    text-align: left;
+  }
+  .hero .continue {
+    display: none;
+  }
+  .home-main::after {
+    top: 0;
+    height: 390vh;
+  }
+  .section {
+    margin-left: 20px;
+  }
+  .dot {
+    left: -23px;
+  }
+  .background {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .background p {
+    width: 100%;
+  }
+  .background img {
+    margin-left: 0;
+    margin-top: 20px;
+    width: 100%;
+  }
+  .skills .development {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
+  }
+  .skills .tool {
+    margin-top: 20px;
+    margin-right: 20px;
+  }
+  .work .project {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin-bottom: 20px;
+  }
+  .work .project img {
+    width: 100%;
+    height: auto;
+  }
+  .work .project-text {
+    margin-top: 40px;
+    width: 100%;
+  }
 }
 /*# sourceMappingURL=style.css.map */
