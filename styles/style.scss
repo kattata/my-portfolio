@@ -54,6 +54,7 @@ a {
 
 .button {
     position: relative;
+    transition: all 0.2s ease-in-out;
     &::after {
         position: absolute;
         content: "";
@@ -63,6 +64,10 @@ a {
         left: 0;
         background-color: $base;
     }
+    &:hover {
+        margin-left: 7px ;
+    }
+
 }
 
 // NAV
@@ -78,19 +83,26 @@ a {
         }
     &-contact {
         display: flex;
-        margin-top: 60px;
+        margin-top: 120px;
         right: 17%;
         font-weight: 500;
         font-size: 16px;
         position: relative;
+        transition: all 0.3s ease-in-out;
         &::after {
             content: "";
             position: absolute;
-            height: 150px;
+            height: 250px;
             width: 2px;
             background-color: $base;
             bottom: 2px;
             right: -10px;
+        }
+        & p {
+            transition: all 0.2s ease-in-out;
+        }
+        &:hover p {
+            margin-right: 7px;
         }
     }
     &-envelope {
@@ -120,7 +132,7 @@ a {
 
 .hero {
     margin: auto;
-    margin-top: 130px;
+    margin-top: 80px;
     height: 100vh;
 }
 
@@ -180,7 +192,7 @@ a {
     &::after {
             content: "";
             position: absolute;
-            height: 387vh;
+            height: 397vh;
             width: 2px;
             background-color: $base;
             top: -87vh;
@@ -232,7 +244,7 @@ a {
         margin-left: 40px;
     }
     &-dot {
-        top: 100px;
+        top: 60px;
     }
 }
 
@@ -276,6 +288,10 @@ a {
     & img {
         height: 300px;
         margin-right: 40px;
+        transition: all 0.2s ease-in-out;
+        &:hover {
+            margin-left: 7px;
+        }
     }
 }
 
@@ -302,6 +318,9 @@ a {
         height: 30px;
         margin: auto;
         display: block;
+        &:hover {
+            margin: auto;
+        }
     }
     
     &-info {
@@ -314,6 +333,10 @@ a {
         flex-direction: column;
         justify-content: center;
         margin-right: 20px;
+        transition: all 0.2s ease-in-out;
+        &:hover {
+            margin-left: 7px;
+        }
     }
     & .email {
         width: 35px;
@@ -333,9 +356,19 @@ a {
     & .footnote {
         margin: 30px 0;
     }
+    a {
+        &:hover {
+            
+        }
+    }
 }
 
 // PROJECT PAGE
+
+.header-project-contact {
+    margin-top: 0px;
+}
+
 .intro {
     margin-top: 110px;
     display: flex;
@@ -365,6 +398,12 @@ a {
     .tech-left {
         margin-right: 30px;
     }
+    & a {
+        transition: all 0.3s ease-in-out;
+        &:hover {
+            opacity: 0.7;
+        }
+    }
 }
 
 .project-links {
@@ -393,7 +432,11 @@ a {
     }
     & .link-text {
         margin-right: 20px;
-        transition: all 1s ease;    }
+        transition: all .3s ease;
+        &:hover {
+            opacity: 0.7;
+        }
+    }
 }
 
 .photo-left {
