@@ -13,7 +13,8 @@
 
 <body>
     <div class="wrapper">
-        <img src="media/marble4.png" alt="Background" class="bg bg1">
+        <!-- <img src="media/marble4.png" alt="Background" class="bg bg1"> -->
+        <!-- <div class="green-bg"></div> -->
         <!-- <img src="media/marble2.png" alt="Background" class="bg bg2"> -->
         <header class="header">
             <nav class="header-nav">
@@ -29,7 +30,7 @@
 
         <!-- HERO -->
         <div class="hero">
-            <p>Hi! My name is Kasia and I'm an aspiring</p>
+            <p>Hi! My name is Kasia <span class="aspiring">and I'm an aspiring</span></p>
             <h1 class="frontend">frontend <span class="stroke">developer</span><span class="and"> and</span></h1>
             <h1 class="ui">UI <span class="stroke">designer</span></h1>
             <div class="continue">
@@ -53,12 +54,13 @@
                         always had a great appreciation for art too. Being able to work with both is like a dream come
                         true to me.</p>
                 </div>
-                <img src="media/me.jpeg" alt="Picture of me">
+                <img src="media/me.jpeg" alt="Picture of me" class="background-img">
             </div>
 
             <!-- SKILLS & TECHNOLOGIES -->
             <div class="skills section">
                 <span class="dot"></span>
+                <div class="skills-inner">
                 <h2>skills & technologies</h2>
                 <h3>DEVELOPMENT</h3>
                 <div class="development">
@@ -78,10 +80,12 @@
                     </div>
                 </div>
             </div>
+            </div>
 
             <!-- WORK -->
             <div class="work section">
                 <span class="dot"></span>
+                <div class="work-inner">
                 <h2>work</h2>
                 <div class="project">
                     <a href="pages/setthelabel.html"><img src="media/stl.png" class="work-img"
@@ -110,26 +114,29 @@
                         <a href="pages/basementbuddy.html" class="button">read more</a>
                     </div>
                 </div>
+                </div>
             </div>
 
             <!-- CONTACT -->
-            <div class="contact section" id="contact">
-                <span class="dot"></span>
-                <h2>contact</h2>
-                <div class="contact-container">
-                    <div class="contact-info"><a href="mailto:kasia.laniecka@gmail.com"><img src="media/envelope.svg"
-                                alt="Email" class="email"></a>
-                    </div>
-                    <div class="contact-info"><a href="https://www.linkedin.com/in/kasia-laniecka-253415188/"><img
-                                src="media/linkedin.png" alt="LinkedIn Link" class="linkedin"></a></div>
-                    <div class="contact-info"><a href="https://github.com/kattata"><img src="media/github.png"
-                                alt="Github Link" class="github"></a></div>
-                    <div class="contact-info resume-container"><a href="#">
-                            <p>resume</p>
-                        </a></div>
+                <div class="contact section" id="contact">
+                    <span class="dot"></span>
+                    <div class="contact-inner">
+                    <h2>contact</h2>
+                    <div class="contact-container">
+                        <div class="contact-info"><a href="mailto:kasia.laniecka@gmail.com"><img src="media/envelope.svg"
+                                    alt="Email" class="email"></a>
+                        </div>
+                        <div class="contact-info"><a href="https://www.linkedin.com/in/kasia-laniecka-253415188/"><img
+                                    src="media/linkedin.png" alt="LinkedIn Link" class="linkedin"></a></div>
+                        <div class="contact-info"><a href="https://github.com/kattata"><img src="media/github.png"
+                                    alt="Github Link" class="github"></a></div>
+                        <div class="contact-info resume-container"><a href="#">
+                                <p>resume</p>
+                            </a></div>
                 </div>
                 <p class="footnote">Designed & developed by Kasia Laniecka</p>
             </div>
+        </div>
         </main>
     </div>
     <script src="main.js"></script>

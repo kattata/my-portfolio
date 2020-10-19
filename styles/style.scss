@@ -1,6 +1,11 @@
 $base: #1D1D1D;
 $main-font: franklin-gothic-atf, sans-serif;
 
+@mixin before-appear {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: 0.7s all ease-in-out;
+}
 
 * {
     margin: 0;
@@ -22,8 +27,10 @@ body {
 } 
 
 .wrapper {
-    width: 60%;
+    width: 65%;
     max-width: 970px;
+    min-width: 970px;
+    padding: auto;
     margin: 0 auto;
 }
 
@@ -100,15 +107,28 @@ a {
         }
         & p {
             transition: all 0.2s ease-in-out;
+            min-width: 100px;
         }
         &:hover p {
-            margin-right: 7px;
+            // background-color: white;
         }
     }
     &-envelope {
         height: 25px;
         margin-right: 8px;
     }
+}
+
+.green-bg {
+    position: absolute;
+    z-index: -1;
+    transform: rotate(-30deg);
+    top: -600px;
+    left: 60%;
+    height: 2500px;
+    width: 1500px;
+    background-color: #D2D9BD;
+    
 }
 
 .bg {
@@ -137,7 +157,7 @@ a {
 }
 
 .hero h1 {
-    font-size: 5vw;
+    font-size: 90px;
     font-family: franklin-gothic-urw, sans-serif;
     font-weight: 500;
 }
@@ -149,6 +169,7 @@ a {
 .frontend {
     position: relative;
     margin-left: -7px;
+    margin-bottom: -15px;
 }
 
 .stroke {
@@ -192,10 +213,12 @@ a {
     &::after {
             content: "";
             position: absolute;
-            height: 365vh;
+            // height: 365vh;
+            min-height: 100%;
             width: 2px;
             background-color: $base;
             top: -50vh;
+            bottom: 0;
             left: 0;
     }
 }
@@ -210,8 +233,6 @@ a {
     }
 }
 
-
-// BACKGROUND
 .dot {
     background-color: white;
     border-radius: 50%;
@@ -219,16 +240,17 @@ a {
     width: 9px;
     display: inline-block;
     border: 2px solid $base;
-    z-index: 20;
+    z-index: 100;
     position: absolute;
     left: -53px;
     top: 10px;
 }
 
+
+// BACKGROUND
 .background {
     display: flex;
     // height: 350px;
-    // justify-content: space-between;
     position: relative;
     padding-top: 50px;
     margin-top: -200px;
@@ -237,17 +259,23 @@ a {
         width: 400px;
         align-content: center;
     }
-    & img {
+    &-img {
         object-fit: cover;
         object-position: center;
         height: 300px;
-        width: 400px;
+        width: 300px;
         margin-left: 40px;
+        @include before-appear;
     }
     &-dot {
         top: 60px;
     }
+    &-text {
+        @include before-appear;
+    }
 }
+
+
 
 // SKILLS 
 
@@ -275,6 +303,10 @@ a {
     }
 }
 
+.skills-inner {
+    @include before-appear;
+}
+
 .development {
     display: flex;
 }
@@ -296,6 +328,10 @@ a {
     }
 }
 
+.work-inner {
+    @include before-appear;
+}
+
 .project {
     display: flex;
     margin-bottom: 40px;
@@ -312,7 +348,6 @@ a {
 // CONTACT
 .contact {
     position: relative;
-    
     &-container {
         display: flex;
     }
@@ -324,13 +359,15 @@ a {
             margin: auto;
         }
     }
-    
+    &-inner {
+        @include before-appear;
+    }
     &-info {
         background-color: white;
         border-radius: 50%;
         border: 2px solid black; 
-        height: 60px;
-        width: 60px;
+        min-height: 60px;
+        min-width: 60px;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -348,7 +385,7 @@ a {
         height: 28px;
     }
     & .resume-container {
-        width: 90px;
+        min-width: 90px;
         border-radius: 35px;
         & a {
             margin: auto;
@@ -365,6 +402,12 @@ a {
     }
 }
 
+// APPEAR ANIMATION
+.appear-effect {
+    opacity: 1;
+    transform: translateY(0);
+}
+
 // PROJECT PAGE
 
 .header-project-contact {
@@ -376,7 +419,7 @@ a {
     display: flex;
     justify-content: space-between;
     &-img-cont {
-        width: auto;
+        min-width: 630px;
         position: relative;
     }
     &-img {
@@ -385,7 +428,7 @@ a {
         margin-right: 30px;
     }
     &-text {
-        width: 550px;
+        // min-width: 300px;
         margin-left: 30px;
     }
     &-technologies {
@@ -455,6 +498,9 @@ a {
     }
     &-text {
         min-width: 300px;
+        display: flex;
+        flex-direction: column;
+        align-self: center;
     }
 }
 
@@ -467,6 +513,12 @@ a {
     }
     &-img {
         width: 100%;
+    }
+    &-text {
+        min-width: 300px;
+        display: flex;
+        flex-direction: column;
+        align-self: center;
     }
 }
 
@@ -505,21 +557,29 @@ a {
     a {
         text-decoration: none;
     }
+    h2 {
+        margin-bottom: 30px;
+    }
 }
 
 
 @media (max-width: 1000px) {
 
     body {
-        width: 100vw;
+        width: 100%;
+        overflow-x: hidden;
     }
     .wrapper {
         width: 90%;
+        min-width: auto;
+        max-width: 500px;
+        margin: auto;
     }
 
     .header {
         &-contact {
         margin-top: 0px;
+        margin-right: 0;
         right: 5%;
     }
     } 
@@ -541,11 +601,16 @@ a {
     .hero {
         height: 50vh;
         & h1 {
-            font-size: 35px;
-            line-height: 1.2;
+            font-size: 50px;
+            line-height: 1;
+            margin-bottom: 5px;
         }
         & p {
             font-size: 16px;
+            display: flex;
+            text-align: center;
+            flex-direction: column;
+            margin-bottom: 20px;
         }
         .frontend {
             margin-left: 0;
@@ -555,30 +620,35 @@ a {
             font-size: 16px;
         }
         .ui {
-            text-align: left;
+            text-align: right;
         }
         .continue {
             display: none;
+        }
+        .aspiring {
+
         }
     }
 
     .home-main {
         &::after {
-            top: 0;
-            height: 390vh;
+            top: 160px;
+            min-height: 90%;
         }
     }
 
     .section {
-        margin-left: 20px;
+        margin-left: 30px;
+        margin-bottom: 30px;
     }
 
     .dot {
-        left: -23px;
+        left: -33px;
     }
 
     .background {
         flex-direction: column;
+        padding-top: 150px;
         & p {
             width: 100%;
         }
@@ -588,35 +658,55 @@ a {
             margin-top: 20px;
             width: 100%;
         }
+        &-dot {
+            top: 160px;
+        }
     }
 
     .skills {
-        & .development {
+        & .development, .design {
             display: grid;
-            grid-template-columns: 1fr 1fr 1fr;
-        }
-
-        & .tool {
-            margin-top: 20px;
-            margin-right: 20px;
+            // grid-template-columns: 1fr 1fr 1fr;
+            grid-template-columns: repeat(auto-fit, 90px);
+            grid-gap: 20px;
         }
     }
 
     .work {
         .project {
             flex-direction: column;
-            margin-bottom: 20px;
+            margin-bottom: 0;
+            height: auto;
             & img {
                 width: 100%;
                 height: auto;
             }
             &-text {
-                margin-top: 40px;
+                margin: 20px 0 70px;
                 width: 100%;
             }
 
         }
     }
+
+    .contact {
+        & img {
+            height: 25px;
+        }
+        &-info {
+            margin-right: 10px;
+            min-width: 50px;
+            min-height: 50px;;
+        }
+        & .email {
+            width: 30px;
+            height: 30px;
+        }
+        & .linkedin {
+            height: 20px;
+        }
+    }
+
     // PROJECT
     .project-main h4 {
         width: 80%;
@@ -630,12 +720,17 @@ a {
             margin-left: 0;
         }
         &-technologies {
-            justify-content: space-around;
-            margin: 0 40x;
+            justify-content: left;
         }
         &-info {
             text-align: center;
             margin-top: 10px;
+        }
+        &-img-cont {
+            min-width: auto;
+        }
+        .tech-left {
+            margin-right: 70px;
         }
     }
 
@@ -670,7 +765,7 @@ a {
 
     .project-contact {
         &::after {
-            left: -19px;
+            left: -29px;
         }
     }
 
