@@ -77,6 +77,24 @@ a {
 
 }
 
+@keyframes contactSlide {
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes contactOpacitySlide {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 // NAV
 .header {
     display: flex;
@@ -104,30 +122,46 @@ a {
             background-color: $base;
             bottom: 2px;
             right: -10px;
+            transform: translateY(-300px);
+            animation: contactSlide .8s ease-in 0.5s forwards;
         }
         & p {
             transition: all 0.2s ease-in-out;
             min-width: 100px;
+            opacity: 0;
+            animation: contactOpacitySlide .5s ease-in 1.4s forwards;
         }
-        &:hover p {
-            // background-color: white;
-        }
+
     }
     &-envelope {
         height: 25px;
         margin-right: 8px;
+        opacity: 0;
+            animation: contactOpacitySlide .5s ease-in 1.7s forwards;
     }
 }
 
 .green-bg {
-    position: absolute;
+    position: fixed;
     z-index: -1;
-    transform: rotate(-30deg);
-    top: -600px;
-    left: 60%;
-    height: 2500px;
-    width: 1500px;
-    background-color: #D2D9BD;
+    top: 0;
+    left: 0;
+
+    // transform: rotate(-30deg);
+    // top: -600px;
+    // left: 60%;
+    // height: 2500px;
+    // width: 1500px;
+    // background-color: #D2D9BD;
+    // width: 0;
+    // height: 0;
+    // border: solid 100vw;
+    // border-color: #D2D9BD transparent transparent transparent;
+    // position: absolute;
+    // z-index: -1;
+    // top: -1500px;
+    // left: -90%;
+    // transform: rotate(100deg);
     
 }
 
@@ -207,6 +241,12 @@ a {
     }
 }
 
+@keyframes lineLeftSlideUp {
+    to {
+        transform: translateY(0);
+    }
+}
+
 .home-main {
     position: relative;
     // LINE LEFT
@@ -220,6 +260,8 @@ a {
             top: -50vh;
             bottom: 0;
             left: 0;
+            transform: translateY(50%);
+            animation: lineLeftSlideUp 2s ease-in 1.2s forwards;
     }
 }
 
@@ -584,19 +626,6 @@ a {
     }
     } 
 
-    .bg {
-        height: 300vh;
-        width: auto;
-    }
-
-    .bg1 {
-        left: 0;
-    }
-
-    .bg2 {
-        top: 245vh;
-    }
-
 
     .hero {
         height: 50vh;
@@ -607,9 +636,7 @@ a {
         }
         & p {
             font-size: 16px;
-            display: flex;
-            text-align: center;
-            flex-direction: column;
+
             margin-bottom: 20px;
         }
         .frontend {
@@ -625,14 +652,12 @@ a {
         .continue {
             display: none;
         }
-        .aspiring {
 
-        }
     }
 
     .home-main {
         &::after {
-            top: 160px;
+            top: -30px;
             min-height: 90%;
         }
     }
