@@ -17,3 +17,15 @@ window.addEventListener('scroll', () => {
         scrollAppear(section);
     })
 });
+
+// BACKGROUND CHANGE
+function changeBgColor() {
+    if (this.scrollY > this.innerHeight / 3) {
+        document.querySelector('.index-body').classList.add('bg-active');
+    } else {
+        document.querySelector('.index-body').classList.remove('bg-active');
+
+    }
+}
+
+window.addEventListener('scroll', changeBgColor);

@@ -26,6 +26,17 @@ body {
     font-size: 16px;
 } 
 
+.index-body {
+    // background-color: rgb(189, 221, 209);
+    // background-color: rgb(233, 231, 216);
+    background-color: rgb(206, 206, 204);
+    transition: all 1s ease-in-out;
+}
+
+.bg-active {
+    background-color: white;
+}
+
 .wrapper {
     width: 65%;
     max-width: 970px;
@@ -113,7 +124,15 @@ a {
         font-weight: 500;
         font-size: 16px;
         position: relative;
-        transition: all 0.3s ease-in-out;
+        transition: all 0.2s ease-in-out;
+        &:hover .header-contact::after {
+        }
+        &:hover::after {
+            bottom: -7px;
+            background-color: $base;
+            z-index: -10;
+            width: 170px;
+        }
         &::after {
             content: "";
             position: absolute;
@@ -123,21 +142,27 @@ a {
             bottom: 2px;
             right: -10px;
             transform: translateY(-300px);
-            animation: contactSlide .8s ease-in 0.5s forwards;
+            animation: contactSlide .8s ease-in forwards;
+            transition: all 0.2s ease-in-out;
+
         }
         & p {
             transition: all 0.2s ease-in-out;
             min-width: 100px;
             opacity: 0;
-            animation: contactOpacitySlide .5s ease-in 1.4s forwards;
+            animation: contactOpacitySlide .5s ease-in 1s forwards;
+            &:hover {
+                color: white;
+            }
         }
-
     }
     &-envelope {
         height: 25px;
         margin-right: 8px;
         opacity: 0;
-            animation: contactOpacitySlide .5s ease-in 1.7s forwards;
+        transition: all 0.2s ease-in-out;
+
+            animation: contactOpacitySlide .5s ease-in 1.2s forwards;
     }
 }
 
@@ -145,45 +170,10 @@ a {
     position: fixed;
     z-index: -1;
     top: 0;
-    left: 0;
-
-    // transform: rotate(-30deg);
-    // top: -600px;
-    // left: 60%;
-    // height: 2500px;
-    // width: 1500px;
-    // background-color: #D2D9BD;
-    // width: 0;
-    // height: 0;
-    // border: solid 100vw;
-    // border-color: #D2D9BD transparent transparent transparent;
-    // position: absolute;
-    // z-index: -1;
-    // top: -1500px;
-    // left: -90%;
-    // transform: rotate(100deg);
-    
-}
-
-.bg {
-    position: absolute;
-    z-index: -1;
-    width: 100%;
-    opacity: 0.6;
-}
-
-.bg1 {
-    top: -50px;
-    left: 20%;
-}
-
-.bg2 {
-    left: 0;
-    top: 220vh;
+    left: 0;    
 }
 
 // HERO
-
 .hero {
     margin: auto;
     margin-top: 80px;
@@ -228,6 +218,24 @@ a {
     bottom: 20px;
     left: 50%;
     transform: translateX(-50%);
+    transition: all 0.2s ease-in-out;
+    &::after {
+        content: "";
+            position: absolute;
+            height: 120%;
+            width: 0;
+            background-color: $base;
+            bottom: 10%;
+            left: -20%;
+            transition: all 0.2s ease-in-out;
+            z-index: -10;
+    }
+    &:hover::after {
+        width: 140%;
+    }
+    &:hover a {
+        color: white;
+    }
     & a {
         font-size: 16px;
         font-weight: 500;
@@ -260,8 +268,8 @@ a {
             top: -50vh;
             bottom: 0;
             left: 0;
-            transform: translateY(50%);
-            animation: lineLeftSlideUp 2s ease-in 1.2s forwards;
+            transform: translateY(20%);
+            animation: lineLeftSlideUp .8s ease-in 0.5s forwards;
     }
 }
 
@@ -341,6 +349,18 @@ a {
         width: auto;
         max-width: 60px;
         max-height: 60px;
+    }
+    & .sass {
+        font-weight: 500;
+        font-size: 14px;
+        text-align: center;
+    }
+    & .fire {
+        padding-top: 10px;
+        max-height: 73px;
+    }
+    & .figma {
+        max-height: 80px;
     }
     }
 }
