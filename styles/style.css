@@ -211,6 +211,8 @@ a {
 .header-contact p {
   -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
+  -webkit-transition: color 0.2s ease-in-out .35s;
+  transition: color 0.2s ease-in-out .35s;
   min-width: 100px;
   opacity: 0;
   -webkit-animation: contactOpacitySlide .5s ease-in 1s forwards;
@@ -330,18 +332,21 @@ a {
 .continue::after {
   content: "";
   position: absolute;
-  height: 120%;
-  width: 0;
+  height: 0;
+  width: 140%;
   background-color: #1D1D1D;
-  bottom: 10%;
+  bottom: 15%;
   left: -20%;
   -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
+  -webkit-transition-delay: 0.35s;
+          transition-delay: 0.35s;
   z-index: -10;
 }
 
 .continue:hover::after {
   width: 140%;
+  height: 130%;
 }
 
 .continue:hover a {
@@ -352,6 +357,51 @@ a {
   font-size: 16px;
   font-weight: 500;
   display: block;
+  padding-bottom: 20px;
+}
+
+.continue a::before {
+  content: "";
+  position: absolute;
+  height: 1px;
+  width: 10px;
+  background-color: #1D1D1D;
+  bottom: 15%;
+  left: 45%;
+  -webkit-transform: translateX(-50%) rotate(45deg);
+          transform: translateX(-50%) rotate(45deg);
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  z-index: -10;
+}
+
+.continue a::after {
+  content: "";
+  position: absolute;
+  height: 1px;
+  width: 10px;
+  background-color: #1D1D1D;
+  bottom: 15%;
+  left: 55%;
+  -webkit-transform: translateX(-50%) rotate(-45deg);
+          transform: translateX(-50%) rotate(-45deg);
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  z-index: -10;
+}
+
+.continue a:hover::before {
+  width: 50px;
+  -webkit-transform: rotate(0deg);
+          transform: rotate(0deg);
+  left: -10px;
+}
+
+.continue a:hover::after {
+  width: 45px;
+  -webkit-transform: rotate(0deg);
+          transform: rotate(0deg);
+  right: 0;
 }
 
 .continue img {
@@ -424,6 +474,8 @@ a {
   position: relative;
   padding-top: 50px;
   margin-top: -200px;
+  -ms-flex-line-pack: center;
+      align-content: center;
 }
 
 .background p {
@@ -433,12 +485,16 @@ a {
       align-content: center;
 }
 
+.background span {
+  font-weight: 500;
+}
+
 .background-img {
   -o-object-fit: cover;
      object-fit: cover;
   -o-object-position: center;
      object-position: center;
-  height: 300px;
+  height: 400px;
   width: 300px;
   margin-left: 40px;
   opacity: 0;
@@ -579,6 +635,12 @@ a {
   height: 30px;
   margin: auto;
   display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  z-index: 10;
 }
 
 .contact img:hover {
@@ -594,9 +656,10 @@ a {
 }
 
 .contact-info {
+  position: relative;
   background-color: white;
   border-radius: 50%;
-  border: 2px solid black;
+  border: 2px solid #1D1D1D;
   min-height: 60px;
   min-width: 60px;
   display: -webkit-box;
@@ -610,12 +673,16 @@ a {
       -ms-flex-pack: center;
           justify-content: center;
   margin-right: 20px;
+  background: -webkit-gradient(linear, left top, right top, color-stop(50%, #1D1D1D), color-stop(50%, white));
+  background: linear-gradient(to right, #1D1D1D 50%, white 50%);
+  background-size: 200% 100%;
+  background-position: right bottom;
   -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
 }
 
 .contact-info:hover {
-  margin-left: 7px;
+  background-position: left bottom;
 }
 
 .contact .email {
@@ -634,6 +701,10 @@ a {
 
 .contact .resume-container a {
   margin: auto;
+}
+
+.contact .resume-container a:hover {
+  color: white;
 }
 
 .contact .footnote {
@@ -835,7 +906,7 @@ a {
 .project-contact::after {
   content: "";
   position: absolute;
-  height: 150px;
+  height: 160px;
   width: 2px;
   background-color: #1D1D1D;
   top: 10px;
