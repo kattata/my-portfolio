@@ -110,7 +110,6 @@ a {
     &:hover {
         color: white;
         margin-left: 10px;
-
     }
 
 }
@@ -281,7 +280,7 @@ a {
             height: 0;
             width: 140%;
             background-color: $base;
-            bottom: 15%;
+            bottom: 10%;
             left: -20%;
             transition: all 0.2s ease-in-out;
             transition-delay: 0.35s;
@@ -306,8 +305,8 @@ a {
             width: 10px;
             background-color: $base;
             bottom: 15%;
-            left: 45%;
-            transform: translateX(-50%) rotate(45deg);
+            left: 43%;
+            transform: translateX(-50%) rotate(20deg);
             transition: all 0.2s ease-in-out;
             z-index: -10;
         }
@@ -318,8 +317,8 @@ a {
             width: 10px;
             background-color: $base;
             bottom: 15%;
-            left: 55%;
-            transform: translateX(-50%) rotate(-45deg);
+            left: 57%;
+            transform: translateX(-50%) rotate(-20deg);
             transition: all 0.2s ease-in-out;
             z-index: -10;
         }
