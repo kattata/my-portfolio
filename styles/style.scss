@@ -24,6 +24,7 @@ body {
     font-family: $main-font;
     font-weight: 100;
     font-size: 16px;
+    background-image: url(media/marble.jpg);
 } 
 
 .index-body {
@@ -81,9 +82,34 @@ a {
         bottom: -5px;
         left: 0;
         background-color: $base;
+        transition: all 0.2s ease-in-out;
+        z-index: -10;
+    }
+    &::before {
+        position: absolute;
+        content: "";
+        height: 0;
+        width: 120%;
+        bottom: -5px;
+        left: -10%;
+        background-color: $base;
+        transition: all 0.2s ease-in-out;
+        transition-delay: .35s;
+        z-index: -10;
+    }
+    &:hover::after {
+        width: 120%;
+        left: -10%;
+    }
+    &:hover::before {
+        height: 135%;
+        width: 120%;
+        left: -10%;
     }
     &:hover {
-        margin-left: 7px ;
+        color: white;
+        margin-left: 10px;
+
     }
 
 }
@@ -125,34 +151,62 @@ a {
         font-size: 16px;
         position: relative;
         transition: all 0.2s ease-in-out;
-        &:hover .header-contact::after {
-        }
-        &:hover::after {
-            bottom: -7px;
-            background-color: $base;
-            z-index: -10;
-            width: 170px;
-        }
+        padding-top: 20px;
         &::after {
             content: "";
             position: absolute;
             height: 250px;
             width: 2px;
             background-color: $base;
-            bottom: 2px;
+            bottom: 4px;
             right: -10px;
             transform: translateY(-300px);
             animation: contactSlide .8s ease-in forwards;
-            transition: all 0.2s ease-in-out;
-
+            transition: all 0.4s ease-in-out;
+        }
+        &:hover::after {
+            bottom: -10px;
         }
         & p {
             transition: all 0.2s ease-in-out;
             min-width: 100px;
             opacity: 0;
             animation: contactOpacitySlide .5s ease-in 1s forwards;
+            &::before {
+            content: "";
+            position: absolute;
+            height: 0;
+            width: 0;
+            background-color: $base;
+            bottom: -10px;
+            right: -10px;
+            transition: all 0.4s ease-in-out;
+            z-index: -10;
+            }
+            &::after {
+                content: "";
+            position: absolute;
+            height: 0;
+            width: 150%;
+            opacity: 0;
+            background-color: $base;
+            bottom: -10px;
+            right: -10px;
+            transition: height 0.4s ease-in-out;
+            transition-delay: .35s;
+            z-index: -10;
+            }
+            &:hover::before {
+                height: 2px;
+                width: 150%;
+            }
+            &:hover::after {
+                height: 300px;
+                opacity: 1;
+            }
             &:hover {
                 color: white;
+                font-weight: 500;
             }
         }
     }
@@ -384,9 +438,6 @@ a {
         height: 300px;
         margin-right: 40px;
         transition: all 0.2s ease-in-out;
-        &:hover {
-            margin-left: 7px;
-        }
     }
 }
 
@@ -677,7 +728,7 @@ a {
 
     .home-main {
         &::after {
-            top: -30px;
+            top: 30px;
             min-height: 90%;
         }
     }
