@@ -16,11 +16,10 @@ body {
   font-family: franklin-gothic-atf, sans-serif;
   font-weight: 100;
   font-size: 16px;
-  background-image: url(media/marble.jpg);
 }
 
 .index-body {
-  background-color: #cececc;
+  background-color: #e8e9e6;
   -webkit-transition: all 1s ease-in-out;
   transition: all 1s ease-in-out;
 }
@@ -729,6 +728,11 @@ a {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  opacity: 0;
+  -webkit-transform: translateY(20px);
+          transform: translateY(20px);
+  -webkit-transition: 0.7s all ease-in-out;
+  transition: 0.7s all ease-in-out;
 }
 
 .intro-img-cont {

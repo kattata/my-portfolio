@@ -1,5 +1,5 @@
 // APPEAR EFFECT
-let appearEffectSections = [".background-text", ".background-img", ".skills-inner", ".work-inner", ".contact-inner"];
+let appearEffectSections = [".background-text", ".background-img", ".skills-inner", ".work-inner", ".contact-inner", ".intro"];
 
 function scrollAppear(className) {
     let section = document.querySelector(className)
