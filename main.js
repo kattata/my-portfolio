@@ -42,6 +42,9 @@ function changeContactHome(container, image, name) {
     container.addEventListener('mouseenter', function () {
         image.src = `media/white-${name}.svg`;
     })
+    container.addEventListener('mousemove', function () {
+        image.src = `media/white-${name}.svg`;
+    })
     // ADD DELAY IF EMAIL
     if (container == emailContainer) {
         container.addEventListener('mouseleave', function () {
@@ -92,7 +95,11 @@ const hideEmail = () => {
 
 }
 
-emailContainer.addEventListener("mouseenter", expandEmail);
+emailContainer.addEventListener("mouseenter", () => {
+    setTimeout(() => {
+        expandEmail()
+    }, 500);
+});
 emailContainer.addEventListener("mousemove", expandEmail);
 emailContainer.addEventListener("mouseleave", () => {
     setTimeout(() => {
