@@ -565,15 +565,14 @@ a {
         & .email {
             width: 35px;
             height: 35px;
-            // position: static;
         }
 
     }
 
     & .active {
         border-radius: 35px;
-            background-position: left bottom;
-            width: auto;
+        background-position: left bottom;
+        width: auto;
     }
 
     & .linkedin {
@@ -874,9 +873,12 @@ a {
             min-width: 50px;
             min-height: 50px;;
         }
+        & .email-container {
+            width: 50px;
+        }
         & .email {
-            width: 30px;
-            height: 30px;
+            width: 30px !important;
+            height: 30px !important;
         }
         & .linkedin {
             height: 20px;

@@ -4,7 +4,7 @@ let appearEffectSections = [".background-text", ".background-img", ".skills-inne
 function scrollAppear(className) {
     let section = document.querySelector(className)
     let sectionPosition = section.getBoundingClientRect().top;
-    let screenPosition = window.innerHeight / 1.3;
+    let screenPosition = window.innerHeight / 1.1;
     if (sectionPosition < screenPosition) {
         section.classList.add('appear-effect');
     } else {
@@ -13,9 +13,7 @@ function scrollAppear(className) {
 }
 
 window.addEventListener('scroll', () => {
-    appearEffectSections.forEach(section => {
-        scrollAppear(section);
-    })
+    appearEffectSections.forEach(section => { scrollAppear(section) })
 });
 
 // BACKGROUND CHANGE
@@ -37,6 +35,8 @@ let linkedinContainer = document.querySelector('.linkedin-container');
 let linkedin = document.querySelector('.linkedin');
 let githubContainer = document.querySelector('.github-container');
 let github = document.querySelector('.github');
+
+let windowWidth = window.matchMedia("(min-width: 1000px)");
 
 function changeContactHome(container, image, name) {
     container.addEventListener('mouseenter', function () {
@@ -66,25 +66,34 @@ changeContactHome(githubContainer, github, 'github');
 
 // COPY EMAIL TO CLIPBOARD
 const expandEmail = () => {
-
-    const link = emailContainer.querySelector('p');
-    link.style.opacity = "1";
-    link.style.transform = "translateX(0)";
-    emailContainer.classList.add("active")
-    email.style.left = "40px";
+    if (windowWidth.matches) {
+        const link = emailContainer.querySelector('p');
+        link.style.opacity = "1";
+        link.style.transform = "translateX(0)";
+        emailContainer.classList.add("active")
+        email.style.left = "40px";
+    } else {
+        return null;
+    }
 }
 
 const hideEmail = () => {
-    const link = emailContainer.querySelector('p');
-    link.style.opacity = "0"
-    link.style.transform = "translateX(-50px)";
-    emailContainer.classList.remove("active");
-    email.style.left = "50%";
+    if (windowWidth.matches) {
+
+        const link = emailContainer.querySelector('p');
+        link.style.opacity = "0"
+        link.style.transform = "translateX(-50px)";
+        emailContainer.classList.remove("active");
+        email.style.left = "50%";
+    } else {
+        return null;
+    }
 
 
 }
 
 emailContainer.addEventListener("mouseenter", expandEmail);
+emailContainer.addEventListener("mousemove", expandEmail);
 emailContainer.addEventListener("mouseleave", () => {
     setTimeout(() => {
         hideEmail();

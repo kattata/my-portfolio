@@ -1047,9 +1047,12 @@ a {
     min-width: 50px;
     min-height: 50px;
   }
+  .contact .email-container {
+    width: 50px;
+  }
   .contact .email {
-    width: 30px;
-    height: 30px;
+    width: 30px !important;
+    height: 30px !important;
   }
   .contact .linkedin {
     height: 20px;
