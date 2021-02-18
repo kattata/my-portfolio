@@ -950,3 +950,18 @@ a {
     }
 
 }
+
+
+@media (min-width: 2000px) {
+    .hero {
+        height: 40vh;
+    }
+
+    .home-main::after {
+        top: 0;
+    }
+
+    .continue {
+        display: none;
+    }
+}
