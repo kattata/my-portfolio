@@ -541,10 +541,41 @@ a {
         background-position: left bottom;
         }
     }
-    & .email {
-        width: 35px;
-        height: 35px;
+    // EMAIL HOVER ANIMATION
+    & .email-container {
+        width: 60px;
+        &:hover {
+            // min-width: auto;
+            // border-radius: 35px;
+            // background-position: left bottom;
+            // width: auto;
+            & a {
+                position: relative;
+            }
+            & .email {
+                // left: 40px;
+            }
+        }
+        & p {
+            padding: 0 20px 0 70px;
+            color: white;
+            transition: all 0.3s ease;
+            font-weight: 400;
+        }
+        & .email {
+            width: 35px;
+            height: 35px;
+            // position: static;
+        }
+
     }
+
+    & .active {
+        border-radius: 35px;
+            background-position: left bottom;
+            width: auto;
+    }
+
     & .linkedin {
         height: 28px;
     }
@@ -850,6 +881,8 @@ a {
         & .linkedin {
             height: 20px;
         }
+
+        
     }
 
     // PROJECT

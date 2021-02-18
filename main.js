@@ -42,14 +42,54 @@ function changeContactHome(container, image, name) {
     container.addEventListener('mouseenter', function () {
         image.src = `media/white-${name}.svg`;
     })
-    container.addEventListener('mouseleave', function () {
-        image.src = `media/${name}.svg`;
-    })
+    // ADD DELAY IF EMAIL
+    if (container == emailContainer) {
+        container.addEventListener('mouseleave', function () {
+            setTimeout(() => {
+
+                image.src = `media/${name}.svg`;
+            }, 1000);
+        })
+    } else {
+        container.addEventListener('mouseleave', function () {
+            setTimeout(() => {
+
+                image.src = `media/${name}.svg`;
+            }, 0);
+        })
+    }
 }
 
 changeContactHome(emailContainer, email, 'envelope');
 changeContactHome(linkedinContainer, linkedin, 'linkedin');
 changeContactHome(githubContainer, github, 'github');
 
+// COPY EMAIL TO CLIPBOARD
+const expandEmail = () => {
 
+    const link = emailContainer.querySelector('p');
+    link.style.opacity = "1";
+    link.style.transform = "translateX(0)";
+    emailContainer.classList.add("active")
+    email.style.left = "40px";
+}
+
+const hideEmail = () => {
+    const link = emailContainer.querySelector('p');
+    link.style.opacity = "0"
+    link.style.transform = "translateX(-50px)";
+    emailContainer.classList.remove("active");
+    email.style.left = "50%";
+
+
+}
+
+emailContainer.addEventListener("mouseenter", expandEmail);
+emailContainer.addEventListener("mouseleave", () => {
+    setTimeout(() => {
+        hideEmail();
+    }, 1000);
+}
+
+);
 

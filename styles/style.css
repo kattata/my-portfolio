@@ -684,9 +684,31 @@ a {
   background-position: left bottom;
 }
 
-.contact .email {
+.contact .email-container {
+  width: 60px;
+}
+
+.contact .email-container:hover a {
+  position: relative;
+}
+
+.contact .email-container p {
+  padding: 0 20px 0 70px;
+  color: white;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  font-weight: 400;
+}
+
+.contact .email-container .email {
   width: 35px;
   height: 35px;
+}
+
+.contact .active {
+  border-radius: 35px;
+  background-position: left bottom;
+  width: auto;
 }
 
 .contact .linkedin {
