@@ -19,7 +19,7 @@ body {
 }
 
 .index-body {
-  background-color: #e3cdf5;
+  background-color: #e7e7e7;
   -webkit-transition: all 1s ease-in-out;
   transition: all 1s ease-in-out;
 }
@@ -814,13 +814,10 @@ a {
   padding-top: 50px;
 }
 
-.photo-left-cont {
-  width: auto;
-  margin-left: 30px;
-}
-
 .photo-left-img {
-  width: 100%;
+  width: auto;
+  max-width: 650px;
+  padding-left: 30px;
 }
 
 .photo-left-text {
@@ -843,13 +840,10 @@ a {
   padding-top: 50px;
 }
 
-.photo-right-cont {
-  width: auto;
-  margin-right: 30px;
-}
-
 .photo-right-img {
-  width: 100%;
+  max-width: 650px;
+  width: auto;
+  padding-right: 30px;
 }
 
 .photo-right-text {

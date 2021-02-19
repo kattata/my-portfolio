@@ -27,7 +27,7 @@ body {
 } 
 
 .index-body {
-    background-color: rgb(227, 205, 245);
+    background-color: rgb(231, 231, 231);
     // background-color: #c1d6c5;
     transition: all 1s ease-in-out;
     
@@ -637,12 +637,14 @@ a {
     display: flex;
     flex-direction: row-reverse;
     padding-top: 50px;
-    &-cont {
-        width: auto;
-        margin-left: 30px;
-    }
+    // &-cont {
+    //     width: 650px;
+    //     margin-left: 30px;
+    // }
     &-img {
-        width: 100%;
+        width: auto;
+        max-width: 650px;
+        padding-left: 30px;
         
     }
     &-text {
@@ -656,12 +658,14 @@ a {
 .photo-right {
     display: flex;
     padding-top: 50px;
-    &-cont {
+    // &-cont {
+        //     width: 650px;
+        //     margin-right: 30px;
+        // }
+        &-img {
+        max-width: 650px;
         width: auto;
-        margin-right: 30px;
-    }
-    &-img {
-        width: 100%;
+        padding-right: 30px;
     }
     &-text {
         min-width: 300px;
