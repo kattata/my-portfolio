@@ -1045,15 +1045,17 @@ a {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    padding-top: 20px;
   }
-  .photo-left-cont {
-    margin-bottom: 20px;
-    margin-left: 00;
+  .photo-left img {
     width: 100%;
+    padding-left: 0;
+    margin-bottom: 20px;
   }
-  .photo-right-cont {
-    margin-bottom: 20px;
+  .photo-right img {
     width: 100%;
+    padding-right: 0;
+    margin-bottom: 20px;
   }
   .contact-info {
     height: 50px;

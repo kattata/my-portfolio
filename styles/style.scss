@@ -872,17 +872,31 @@ a {
 
     .photo-left, .photo-right {
         flex-direction: column;
+        padding-top: 20px;
+
     }
 
-    .photo-left-cont {
-        margin-bottom: 20px;
-        margin-left: 00;
+    // .photo-left-cont {
+    //     margin-bottom: 20px;
+    //     margin-left: 00;
+    //     width: 100%;
+    // }
+    
+    // .photo-right-cont {
+    //     margin-bottom: 20px;
+    //     width: 100%;
+    // }
+
+    .photo-left img {
         width: 100%;
+        padding-left: 0;
+        margin-bottom: 20px;
     }
     
-    .photo-right-cont {
-        margin-bottom: 20px;
+    .photo-right img {
         width: 100%;
+        padding-right: 0;
+        margin-bottom: 20px;
     }
 
     .contact {
