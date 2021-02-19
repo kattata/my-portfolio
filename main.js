@@ -4,7 +4,7 @@ let appearEffectSections = [".background-text", ".background-img", ".skills-inne
 function scrollAppear(className) {
     let section = document.querySelector(className)
     let sectionPosition = section.getBoundingClientRect().top;
-    let screenPosition = window.innerHeight / 1.3;
+    let screenPosition = window.innerHeight / 1.1;
     if (sectionPosition < screenPosition) {
         section.classList.add('appear-effect');
     } else {
