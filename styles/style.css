@@ -545,24 +545,9 @@ a {
 .skills .tool img {
   margin: auto;
   display: block;
-  width: auto;
-  max-width: 60px;
-  max-height: 60px;
-}
-
-.skills .tool .sass {
-  font-weight: 500;
-  font-size: 14px;
-  text-align: center;
-}
-
-.skills .tool .fire {
-  padding-top: 10px;
-  max-height: 73px;
-}
-
-.skills .tool .figma {
-  max-height: 80px;
+  width: 100%;
+  max-width: 70px;
+  max-height: 70px;
 }
 
 .skills-inner {
