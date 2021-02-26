@@ -11,3 +11,4 @@ function changeContactHome(container, image, name) {
 changeContactHome(emailContainer, email, 'envelope');
 changeContactHome(linkedinContainer, linkedin, 'linkedin');
 changeContactHome(githubContainer, github, 'github');
+changeContactHome(twitterContainer, twitter, 'twitter');

@@ -37,6 +37,8 @@ let linkedinContainer = document.querySelector('.linkedin-container');
 let linkedin = document.querySelector('.linkedin');
 let githubContainer = document.querySelector('.github-container');
 let github = document.querySelector('.github');
+let twitterContainer = document.querySelector('.twitter-container');
+let twitter = document.querySelector('.twitter');
 
 function changeContactHome(container, image, name) {
     container.addEventListener('mouseenter', function () {
@@ -50,6 +52,7 @@ function changeContactHome(container, image, name) {
 changeContactHome(emailContainer, email, 'envelope');
 changeContactHome(linkedinContainer, linkedin, 'linkedin');
 changeContactHome(githubContainer, github, 'github');
+changeContactHome(twitterContainer, twitter, 'twitter');
 
 
 
