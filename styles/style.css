@@ -12,7 +12,7 @@ html {
 body {
   overflow-x: hidden;
   width: 100%;
-  color: #1D1D1D;
+  color: #1d1d1d;
   font-family: franklin-gothic-atf, sans-serif;
   font-weight: 100;
   font-size: 16px;
@@ -56,7 +56,7 @@ p {
 }
 
 a {
-  color: #1D1D1D;
+  color: #1d1d1d;
   text-decoration: none;
   font-weight: 600;
 }
@@ -74,7 +74,7 @@ a {
   width: 100%;
   bottom: -5px;
   left: 0;
-  background-color: #1D1D1D;
+  background-color: #1d1d1d;
   -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
   z-index: -10;
@@ -87,11 +87,11 @@ a {
   width: 120%;
   bottom: -5px;
   left: -10%;
-  background-color: #1D1D1D;
+  background-color: #1d1d1d;
   -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
-  -webkit-transition-delay: .35s;
-          transition-delay: .35s;
+  -webkit-transition-delay: 0.35s;
+          transition-delay: 0.35s;
   z-index: -10;
 }
 
@@ -192,13 +192,13 @@ a {
   position: absolute;
   height: 250px;
   width: 2px;
-  background-color: #1D1D1D;
+  background-color: #1d1d1d;
   bottom: 4px;
   right: -10px;
   -webkit-transform: translateY(-300px);
           transform: translateY(-300px);
-  -webkit-animation: contactSlide .8s ease-in forwards;
-          animation: contactSlide .8s ease-in forwards;
+  -webkit-animation: contactSlide 0.8s ease-in forwards;
+          animation: contactSlide 0.8s ease-in forwards;
   -webkit-transition: all 0.4s ease-in-out;
   transition: all 0.4s ease-in-out;
 }
@@ -210,12 +210,12 @@ a {
 .header-contact p {
   -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
-  -webkit-transition: color 0.2s ease-in-out .35s;
-  transition: color 0.2s ease-in-out .35s;
+  -webkit-transition: color 0.2s ease-in-out 0.35s;
+  transition: color 0.2s ease-in-out 0.35s;
   min-width: 100px;
   opacity: 0;
-  -webkit-animation: contactOpacitySlide .5s ease-in 1s forwards;
-          animation: contactOpacitySlide .5s ease-in 1s forwards;
+  -webkit-animation: contactOpacitySlide 0.5s ease-in 1s forwards;
+          animation: contactOpacitySlide 0.5s ease-in 1s forwards;
 }
 
 .header-contact p::before {
@@ -223,7 +223,7 @@ a {
   position: absolute;
   height: 0;
   width: 0;
-  background-color: #1D1D1D;
+  background-color: #1d1d1d;
   bottom: -10px;
   right: -10px;
   -webkit-transition: all 0.4s ease-in-out;
@@ -237,13 +237,13 @@ a {
   height: 0;
   width: 150%;
   opacity: 0;
-  background-color: #1D1D1D;
+  background-color: #1d1d1d;
   bottom: -10px;
   right: -10px;
   -webkit-transition: height 0.4s ease-in-out;
   transition: height 0.4s ease-in-out;
-  -webkit-transition-delay: .35s;
-          transition-delay: .35s;
+  -webkit-transition-delay: 0.35s;
+          transition-delay: 0.35s;
   z-index: -10;
 }
 
@@ -268,8 +268,8 @@ a {
   opacity: 0;
   -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
-  -webkit-animation: contactOpacitySlide .5s ease-in 1.2s forwards;
-          animation: contactOpacitySlide .5s ease-in 1.2s forwards;
+  -webkit-animation: contactOpacitySlide 0.5s ease-in 1.2s forwards;
+          animation: contactOpacitySlide 0.5s ease-in 1.2s forwards;
 }
 
 .green-bg {
@@ -333,7 +333,7 @@ a {
   position: absolute;
   height: 0;
   width: 140%;
-  background-color: #1D1D1D;
+  background-color: #1d1d1d;
   bottom: 10%;
   left: -20%;
   -webkit-transition: all 0.2s ease-in-out;
@@ -364,7 +364,7 @@ a {
   position: absolute;
   height: 1px;
   width: 10px;
-  background-color: #1D1D1D;
+  background-color: #1d1d1d;
   bottom: 15%;
   left: 43%;
   -webkit-transform: translateX(-50%) rotate(20deg);
@@ -379,7 +379,7 @@ a {
   position: absolute;
   height: 1px;
   width: 10px;
-  background-color: #1D1D1D;
+  background-color: #1d1d1d;
   bottom: 15%;
   left: 57%;
   -webkit-transform: translateX(-50%) rotate(-20deg);
@@ -433,14 +433,14 @@ a {
   position: absolute;
   min-height: 100%;
   width: 2px;
-  background-color: #1D1D1D;
+  background-color: #1d1d1d;
   top: -50vh;
   bottom: 0;
   left: 0;
   -webkit-transform: translateY(20%);
           transform: translateY(20%);
-  -webkit-animation: lineLeftSlideUp .8s ease-in 0.5s forwards;
-          animation: lineLeftSlideUp .8s ease-in 0.5s forwards;
+  -webkit-animation: lineLeftSlideUp 0.8s ease-in 0.5s forwards;
+          animation: lineLeftSlideUp 0.8s ease-in 0.5s forwards;
 }
 
 .section {
@@ -459,7 +459,7 @@ a {
   height: 9px;
   width: 9px;
   display: inline-block;
-  border: 2px solid #1D1D1D;
+  border: 2px solid #1d1d1d;
   z-index: 100;
   position: absolute;
   left: -53px;
@@ -520,7 +520,7 @@ a {
 }
 
 .skills h3 {
-  margin: 30px 0 20px;
+  margin: 30px 0 15px;
 }
 
 .skills .tool {
@@ -546,8 +546,18 @@ a {
   margin: auto;
   display: block;
   width: 100%;
-  max-width: 70px;
-  max-height: 70px;
+  max-width: 65px;
+  max-height: 65px;
+}
+
+.skills .design .tool img {
+  max-width: 50px;
+  max-height: 50px;
+}
+
+.skill-subtitle {
+  margin-bottom: 15px;
+  margin-top: 10px;
 }
 
 .skills-inner {
@@ -643,7 +653,7 @@ a {
   position: relative;
   background-color: white;
   border-radius: 50%;
-  border: 2px solid #1D1D1D;
+  border: 2px solid #1d1d1d;
   min-height: 60px;
   min-width: 60px;
   display: -webkit-box;
@@ -657,8 +667,8 @@ a {
       -ms-flex-pack: center;
           justify-content: center;
   margin-right: 20px;
-  background: -webkit-gradient(linear, left top, right top, color-stop(50%, #1D1D1D), color-stop(50%, white));
-  background: linear-gradient(to right, #1D1D1D 50%, white 50%);
+  background: -webkit-gradient(linear, left top, right top, color-stop(50%, #1d1d1d), color-stop(50%, white));
+  background: linear-gradient(to right, #1d1d1d 50%, white 50%);
   background-size: 200% 100%;
   background-position: right bottom;
   -webkit-transition: all 0.2s ease-in-out;
@@ -795,8 +805,8 @@ a {
 
 .project-links .link-text {
   margin-right: 20px;
-  -webkit-transition: all .3s ease;
-  transition: all .3s ease;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 .project-links .link-text:hover {
@@ -886,7 +896,7 @@ a {
   position: absolute;
   height: 160px;
   width: 2px;
-  background-color: #1D1D1D;
+  background-color: #1d1d1d;
   top: 10px;
   left: -49px;
 }
@@ -973,7 +983,8 @@ a {
   .background-dot {
     top: 160px;
   }
-  .skills .development, .skills .design {
+  .skills .development,
+  .skills .design {
     display: -ms-grid;
     display: grid;
     -ms-grid-columns: (90px)[auto-fit];
@@ -1040,7 +1051,8 @@ a {
   .intro .tech-left {
     margin-right: 70px;
   }
-  .photo-left, .photo-right {
+  .photo-left,
+  .photo-right {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -1072,3 +1084,4 @@ a {
     left: -29px;
   }
 }
+/*# sourceMappingURL=style.css.map */
