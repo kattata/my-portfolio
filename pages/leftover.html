@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>ParkShare</title>
+    <title>Left Over</title>
     <meta name="description" content="" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="https://use.typekit.net/hlp3uqk.css" />
@@ -34,7 +34,7 @@
         <div class="intro">
           <div class="intro-img-cont">
             <img
-              src="../media/project-main.png"
+              src="../media/leftover-main.png"
               alt="ParkShare Mock Up"
               class="intro-img"
             />
@@ -47,13 +47,13 @@
                   class="link-icon"
                 />
                 <a
-                  href="https://parkshare-mobile.netlify.app/"
+                  href="https://github.com/kattata/left-over"
                   class="website link-text"
                   target="_blank"
                   >website</a
                 >
                 <a
-                  href="https://github.com/kattata/parkshare-mobile-app"
+                  href="https://github.com/kattata/left-over"
                   class="link-text"
                   target="_blank"
                   >code</a
@@ -62,113 +62,133 @@
             </div>
           </div>
           <div class="intro-text">
-            <p class="intro-info">Student project | Individual | 2021</p>
-            <h2>PARKSHARE</h2>
+            <p class="intro-info">Student project | Group of 3 | 2021</p>
+            <h2>LEFT OVER</h2>
             <p>
-              A thesis project, where I collaborated with my internship company
-              to develop a prototype for their product using web technologies.
+              A study project focused on improving our full stack development
+              skills.
             </p>
-            <h4>FIND A PARKING SPOT THAT WORKS FOR YOU</h4>
+            <h4>EXCHANGE LEFT OVER FOOD</h4>
             <p>
-              ParkShare helps drivers find parking spots to rent posted by
-              private owners which allow them to waste less time in traffic,
-              reduce CO2 emissions and save money. My job was to prepare a
-              proposition of a mobile app that could automate their tasks.
+              Our concept was to give people an opportunity to share their left
+              over food with others in order to reduce food waste as well as
+              educate them on how to change their habits.
             </p>
             <h4>My Role</h4>
-            <p>Ideation, UX and UI design, frontend development.</p>
+            <p>
+              Contribute to UX research, UI design and full stack development
+            </p>
             <h4>Tech stack</h4>
             <div class="intro-technologies">
               <div>
                 <h3>DEVELOPMENT</h3>
                 <div class="intro-tech-category tech-left">
                   <p>HTML, CSS & JS</p>
-                  <p>React</p>
+                  <p>PHP</p>
                   <p>SASS</p>
-                  <p>Firebase</p>
-                  <p>APIs</p>
+                  <p>MySQL</p>
+                  <p>Tailwind</p>
                 </div>
               </div>
               <div>
                 <h3>DESIGN</h3>
                 <div class="intro-tech-category">
-                  <p>Adobe XD</p>
+                  <p>Figma</p>
                 </div>
               </div>
             </div>
           </div>
         </div>
 
-        <!-- SEARCH -->
+        <!-- BROWSE -->
         <div class="photo-left">
           <div class="photo-left-cont">
             <img
-              src="../media/portfolio-map.png"
+              src="../media/leftover-browse.png"
               alt="Product Page Screenshots"
               class="photo-left-img"
             />
           </div>
           <div class="photo-left-text">
-            <h4>SEARCH FOR YOUR ADDRESS AND BROWSE THE MAP</h4>
+            <h4>BROWSE AND BUY</h4>
             <p>
-              The first thing a user will interact with is the map. Thanks to
-              MapBox API and ReactMapGL, I marked all the available parking
-              spots with tags, which immediately show the user the price.
+              On the home page the user can browse through products posted by
+              other users, narrow them down by search or filters, see a detailed
+              view and make a purchase.
             </p>
             <p>
-              The search function utilises PositionStack API, which suggests a
-              list of real locations based on the typed in query. This helps the
-              user be sure that the address they choose exists.
+              When buying a product, the user is asked to choose one of the time
+              slots preselected by the seller. Then they are redirected to a
+              payment service (currently not functional!) and view a summary,
+              which they can access in their profile.
             </p>
+            <p>We store our data in a database created with MySQL.</p>
           </div>
         </div>
 
-        <!-- BOOKING INFO -->
+        <!-- SELL -->
         <div class="photo-right">
           <div class="photo-right-cont">
             <img
-              src="../media/portfolio-booking.png"
+              src="../media/leftover-sell.png"
               alt="Visual Identity Screenshots"
               class="photo-right-img"
             />
           </div>
           <div class="photo-right-text">
-            <h4>SELECT BOOKING INFO</h4>
+            <h4>SELL YOUR LEFT OVERS</h4>
             <p>
-              When the address is chosen, the user may select the booking dates
-              in the slide up modal. These can range anywhere from 20 minutes to
-              multiple weeks or even months, depending on the user's needs.
-            </p>
-            <p>
-              Next, the user has the option to choose, which vehicle he wants to
-              park to make sure the spot owner can identify the correct car. The
-              user can select from his existing vehicles or add a new one to
-              match his circumstances.
+              Besides buying food from others, the user can post their own
+              products. They need to enter information and select from a handful
+              of options, which will be displayed in the feed and help other
+              users filter their results.
             </p>
           </div>
         </div>
 
-        <!-- SPOT DETAILS -->
+        <!-- PROFILE DETAILS -->
         <div class="photo-left">
           <div class="photo-left-cont">
             <img
-              src="../media/portfolio-details.png"
+              src="../media/leftover-profile.png"
               alt="Product Page Screenshots"
               class="photo-left-img"
             />
           </div>
           <div class="photo-left-text">
-            <h4>PARKING SPOT DETAILS</h4>
+            <h4>MANAGE YOUR PROFILE</h4>
             <p>
-              When all booking details are filled out, the user explores
-              available spots and taps on his favorite one to see more
-              information about it, such as spot size, description or any extra
-              commodities. They can also confirm their booking time, which was
-              saved in a state during the previous step.
+              Because the goal of the app is becoming more environmentally
+              friendly, they also have access to some statistics describing what
+              effects their actions have.
             </p>
             <p>
-              When a parking spot is chosen, the user may press "Book now" and
-              receive a confirmation.
+              The users also have access to a history of their purchases to make
+              sure they always arrive on time for pick up.
+            </p>
+          </div>
+        </div>
+
+        <!-- AUTHENTICATION -->
+        <div class="photo-right">
+          <div class="photo-right-cont">
+            <img
+              src="../media/leftover-log.png"
+              alt="Visual Identity Screenshots"
+              class="photo-right-img"
+            />
+          </div>
+          <div class="photo-right-text">
+            <h4>SIGN UP AND LOG IN</h4>
+            <p>
+              The foundation of an application like this was user
+              authentication, which allowed us to display specific data based on
+              the logged in user id.
+            </p>
+            <p>
+              Both sign up and log in require a certain amount of validation and
+              if it isn't passed, there are error messages displayed to guide
+              the user in the right direction.
             </p>
           </div>
         </div>
