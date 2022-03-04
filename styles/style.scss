@@ -356,6 +356,7 @@ a {
     top: -50vh;
     bottom: 0;
     left: 0;
+    z-index: 0;
     transform: translateY(20%);
     animation: lineLeftSlideUp 0.8s ease-in 0.5s forwards;
   }
@@ -378,7 +379,7 @@ a {
   width: 9px;
   display: inline-block;
   border: 2px solid $base;
-  z-index: 100;
+  z-index: 300;
   position: absolute;
   left: -53px;
   top: 10px;
